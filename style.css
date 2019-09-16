@@ -1,0 +1,82 @@
+/* Grid Elements */
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas:
+    "nav main main"
+    "nav main main"
+    "nav footer footer";
+  grid-template-rows: 80px 1fr 70px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  height: 100%;
+  font-family: Bahnschrift;
+  }
+footer, main, nav {
+  padding: 1.2em;
+  background: white;
+  font-family: Bahnschrift;
+  }
+nav {
+  grid-area: nav;
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+main {
+  grid-area: main;
+  }
+footer {
+  grid-area: footer;
+  text-align: center;
+  border-top: 3px solid black;
+  }
+
+/* NAV ELEMENTS */
+
+ul {
+  list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    width: 25%;
+    position: fixed;
+    height: 100%
+    color: DarkSlateGray;
+}
+li {
+  font-size: 20px;
+  color: DarkSlateGray;
+}
+a {
+  color: DarkSlateGray;
+  margin: 20px
+}
+
+/* Body Elements */
+header {
+  font-size: 25px;
+}
+img {
+  height: 250px;
+  width: 300px;
+}
+h1 {
+  text-decoration: underline;
+}
+#img-caption {
+  font-size: 10px;
+}
+
+/* Stack the layout on small viewports. */
+@media all and (max-width: 575px) {
+  body {
+    grid-template-areas:
+      "nav main"
+      "nav main"
+      "footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 1fr;
+ }
+}
